@@ -1,42 +1,42 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import MenuIcon from "@material-ui/icons/Menu";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import MenuIcon from '@material-ui/icons/Menu';
 
 function Header() {
   return (
     <Container>
-      <Link to="/">
-        <img src="/images/logo.svg" />
+      <Link to='/'>
+        <img src='/images/logo.svg' />
       </Link>
 
       <Menu>
         <LinkWrap>
-          <Link to="/">Model S </Link>
+          <Link to='/'>Model S </Link>
         </LinkWrap>
 
         <LinkWrap>
-          <Link to="/">Model 3</Link>
+          <Link to='/'>Model 3</Link>
         </LinkWrap>
         <LinkWrap>
-          <Link to="/">Model Y </Link>
+          <Link to='/'>Model Y </Link>
         </LinkWrap>
         <LinkWrap>
-          <Link to="/">Model X</Link>
+          <Link to='/'>Model X</Link>
         </LinkWrap>
         <LinkWrap>
-          <Link to="/">Solar Roof</Link>
+          <Link to='/'>Solar Roof</Link>
         </LinkWrap>
         <LinkWrap>
-          <Link to="/">Solar Panels</Link>
+          <Link to='/'>Solar Panels</Link>
         </LinkWrap>
       </Menu>
       <RightMenu>
         <LinkWrap>
-          <Link to="/">Shop</Link>
+          <Link to='/'>Shop</Link>
         </LinkWrap>
         <LinkWrap>
-          <Link to="/">Tesla Account</Link>
+          <Link to='/'>Tesla Account</Link>
         </LinkWrap>
         <CustomMenu />
       </RightMenu>

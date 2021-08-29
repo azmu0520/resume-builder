@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-function Section({
+const Section = ({
   title,
   description,
   backgroundImg,
   leftBtnText,
   rightBtnText,
-}) {
+}) => {
   return (
     <Wrap bgImage={backgroundImg}>
       <ItemText>
@@ -19,11 +19,11 @@ function Section({
           <LeftButton>{leftBtnText}</LeftButton>
           {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
         </GroupButton>
-        <DownArrow src="/images/down-arrow.svg" />
+        <DownArrow src='/images/down-arrow.svg' />
       </Button>
     </Wrap>
   );
-}
+};
 
 export default Section;
 
@@ -33,11 +33,11 @@ const Wrap = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/images/model-s.jpg");
+  /* background-image: url('/images/model-s.jpg'); */
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: ${(props) => `url("/images/${props.bgImage}")`};
+  background-image: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/32e5e0f3-5c04-42ef-8f8f-c6b1c26f8a9e/bvlatuR/std/2880x1800/ms-main-hero-desktop');
 
   justify-content: space-between;
 `;
