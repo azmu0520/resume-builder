@@ -1,20 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import Header from "./components/Header";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./components/Home";
+import './App.css';
+import Navbar from './components/Navabr';
 
 function App() {
   return (
-    <Router>
-      <Container>
-        <Header />
-        <Home />
-      </Container>
-    </Router>
+    <div className='App'>
+      <Navbar />
+    </div>
   );
 }
 
 export default App;
-
-const Container = styled.div``;
