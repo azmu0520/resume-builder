@@ -34,8 +34,9 @@ export default Navbar;
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  height: 10vh;
-  background-color: red;
+  /* height: 10vh; */
+  position: absolute;
+  background-color: transparent;
   justify-content: space-between;
   align-items: center;
 `;
@@ -50,13 +51,17 @@ const NavLinks = styled.div`
   ul li {
     list-style: none;
     display: inline-block;
-    margin-right: 25px;
+    margin-right: 30px;
+    font-weight: 700;
+    color: #3a3c41;
   }
 `;
 const RightBar = styled.div`
   ul li {
     list-style: none;
     display: inline-block;
-    margin-right: 25px;
+    margin-right: 30px;
+    font-weight: 700;
+    color: #3a3c41;
   }
 `;
