@@ -1,5 +1,15 @@
+@font-face {
+  font-family: Main-Font;
+  src: url(./assets/Main-Font.ttf);
+}
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: Main-Font;
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }
