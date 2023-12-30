@@ -1,5 +1,5 @@
-import { Card } from "@mui/material";
+import { Wrap } from "./style";
 
 export default function Generic() {
-  return <Card>Generic</Card>;
+  return <Wrap>Generic</Wrap>;
 }

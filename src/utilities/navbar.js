@@ -1,10 +1,11 @@
 import Generic from "../components/Generic";
+import Home from "../components/Home";
 export const data = [
   {
     id: 1,
     title: "Home",
     path: "/",
-    Component: Generic,
+    Component: Home,
   },
   {
     id: 2,

@@ -5,15 +5,43 @@ export const Wrap = styled.div`
   width: 100%;
   flex-direction: column;
 `;
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 100px;
 
+  .modal {
+    width: 40% !important;
+    height: 100vh !important;
+    display: flex;
+    align-items: center;
+    background-color: red !important;
+  }
+`;
+
+export const MuModal = styled.div`
+  display: flex;
+  width: 40%;
+  height: 100vh;
+  background-color: red;
+  outline: none;
+  .menu_links {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    button {
+    }
+  }
+`;
 export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1400px;
-  width: 100%;
   height: 90px;
-  margin: 0 auto;
   .logo {
     display: flex;
     align-items: center;
@@ -48,6 +76,27 @@ export const Header = styled.div`
       margin-right: 20px;
       a {
         color: #fff !important;
+      }
+    }
+  }
+  .menu {
+    display: none;
+  }
+  @media (max-width: 1200px) {
+    .links {
+      display: none;
+    }
+    .menu {
+      display: block;
+      cursor: pointer;
+    }
+    .logo {
+      height: 50px;
+      font-size: 20px;
+    }
+    .links {
+      button {
+        max-height: 32px !important;
       }
     }
   }
