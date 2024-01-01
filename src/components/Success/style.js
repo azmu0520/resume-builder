@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const Wrap = styled.div``;
+export const Wrap = styled.div`
+  @media (max-width: 1200px) {
+    display: none;
+  }
+`;
 
 export const Card = styled.div`
   display: flex;
@@ -37,5 +41,21 @@ export const Card = styled.div`
     margin-bottom: 25px;
     font-size: 14px;
     text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    margin: 0 10px;
+    .img_wrap {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    font-size: 13px;
   }
 `;

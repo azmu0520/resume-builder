@@ -57,4 +57,28 @@ export const Wrap = styled.div`
       }
     }
   }
+  @media (max-width: 1300px) {
+    height: fit-content;
+    padding: 60px 80px;
+    margin-top: 60px;
+  }
+  @media (max-width: 1000px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    .item {
+      .img_wrap {
+        font-size: 16px;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    background: #192057;
+    padding: 30px 0;
+  }
 `;

@@ -4,6 +4,9 @@ export const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   margin: 100px;
+  @media (max-width: 1200px) {
+    margin: 50px 0;
+  }
 `;
 
 export const Cards = styled.div`
@@ -37,5 +40,11 @@ export const Cards = styled.div`
       text-align: center;
       width: 90%;
     }
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
   }
 `;

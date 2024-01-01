@@ -9,6 +9,9 @@ export const Wrap = styled.div`
   height: 100vh;
   background: url(${ring}) no-repeat center center;
   background-size: cover;
+  @media (max-width: 1200px) {
+    height: fit-content;
+  }
 `;
 
 export const Cards = styled.div`
@@ -40,5 +43,18 @@ export const Cards = styled.div`
   .card:hover {
     box-shadow: 0 0 2rem -0.5rem #e44747;
     border: 2px solid #e44747;
+  }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    .card {
+      button {
+        height: 35px !important;
+        font-size: 13px !important;
+      }
+    }
   }
 `;

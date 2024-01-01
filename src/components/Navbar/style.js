@@ -18,7 +18,10 @@ export const Container = styled.div`
     height: 100vh !important;
     display: flex;
     align-items: center;
-    background-color: red !important;
+    background-color: #192a56 !important;
+  }
+  @media (max-width: 800px) {
+    padding: 0 20px;
   }
 `;
 
@@ -26,14 +29,15 @@ export const MuModal = styled.div`
   display: flex;
   width: 40%;
   height: 100vh;
-  background-color: red;
+  background-color: #192a56;
   outline: none;
   .menu_links {
     display: flex;
     flex-direction: column;
     padding: 20px;
-
+    color: #fff;
     button {
+      margin: 10px 0;
     }
   }
 `;
@@ -81,15 +85,10 @@ export const Header = styled.div`
   }
   .menu {
     display: none;
+    width: 30px;
+    height: 30px;
   }
   @media (max-width: 1200px) {
-    .links {
-      display: none;
-    }
-    .menu {
-      display: block;
-      cursor: pointer;
-    }
     .logo {
       height: 50px;
       font-size: 20px;
@@ -98,6 +97,15 @@ export const Header = styled.div`
       button {
         max-height: 32px !important;
       }
+    }
+  }
+  @media (max-width: 1000px) {
+    .links {
+      display: none;
+    }
+    .menu {
+      display: block;
+      cursor: pointer;
     }
   }
 `;

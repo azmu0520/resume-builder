@@ -1,23 +1,12 @@
-import { Cards, Header, Wrap } from "./style";
-import header from "../../assets/images/custom.png";
+import { Cards, Wrap } from "./style";
 import { Button } from "@mui/material";
 import { Content } from "../WhyUs/style";
 
 export default function Pricing() {
   return (
     <Wrap>
-      <Header>
-        <img src={header} alt="header" />
-        <h2>Do you Need a Complete Custom CV Template?</h2>
-        <Button
-          variant="contained"
-          style={{ height: "55px", marginLeft: "30px" }}
-        >
-          Send a Request
-        </Button>
-      </Header>
       <Cards>
-        <Content>
+        <Content className="item">
           <div className="spans">
             <span></span>
             <span></span>
@@ -70,7 +59,6 @@ export default function Pricing() {
           </div>
         </div>
         <div className="card">
-          {" "}
           <div className="header">
             <h1>90$</h1>
             <h5>/ year</h5>

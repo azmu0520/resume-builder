@@ -5,25 +5,8 @@ export const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   height: 70vh;
-`;
-
-export const Header = styled.header`
-  display: flex;
-  align-items: center;
-  position: relative;
-  height: 190px;
-  /* padding: 50px 20px; */
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 40px 0 rgb(0 0 0 / 11%);
-  img {
-    width: 300px;
-  }
-  h2 {
-    font-size: 2rem;
-    line-height: 1.4;
-    color: #13287e;
+  @media (max-width: 1400px) {
+    height: fit-content;
   }
 `;
 
@@ -83,6 +66,59 @@ export const Cards = styled.div`
         font-size: 16px;
         font-weight: 400;
       }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    height: fit-content;
+    .item {
+      grid-column: span 2;
+    }
+  }
+  @media (max-width: 900px) {
+    .card {
+      padding: 0 0px 25px;
+      margin-bottom: 15px;
+      .header {
+        margin-bottom: 15px;
+        padding: 20px 15px;
+        background-size: 80%;
+        height: 140px;
+        h1 {
+          font-size: 27px;
+          margin-bottom: 8px;
+        }
+        h5 {
+          font-size: 14px;
+          margin-bottom: 16px;
+        }
+      }
+      .details {
+        padding: 0 10px;
+        h2 {
+          font-size: 18px;
+          margin-bottom: 14px;
+          span {
+            font-size: 12px;
+            padding: 2px 8px;
+          }
+          p {
+            margin-bottom: 14px;
+            font-size: 14px;
+          }
+        }
+      }
+      button {
+        height: 40px !important;
+        font-size: 12px !important;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .card .header {
+      background-size: 100%;
     }
   }
 `;

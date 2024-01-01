@@ -1,5 +1,8 @@
-import Generic from "../components/Generic";
+import About from "../pages/About";
 import Home from "../components/Home";
+import Pricing from "../pages/Pricing";
+import Templates from "../pages/Templates";
+import Contact from "../pages/Contact";
 export const data = [
   {
     id: 1,
@@ -11,24 +14,24 @@ export const data = [
     id: 2,
     title: "About Us",
     path: "about-us",
-    Component: Generic,
+    Component: About,
   },
   {
     id: 3,
     title: "Pricing",
     path: "pricing",
-    Component: Generic,
+    Component: Pricing,
   },
   {
     id: 4,
     title: "Templates",
     path: "templates",
-    Component: Generic,
+    Component: Templates,
   },
   {
     id: 5,
     title: "Contact",
     path: "contact",
-    Component: Generic,
+    Component: Contact,
   },
 ];

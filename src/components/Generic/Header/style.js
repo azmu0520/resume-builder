@@ -57,4 +57,13 @@ export const Wrap = styled.div`
     width: 40%;
     text-align: center;
   }
+  @media (max-width: 1000px) {
+    h2 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 13px;
+      width: 80%;
+    }
+  }
 `;

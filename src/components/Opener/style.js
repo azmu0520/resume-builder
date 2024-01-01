@@ -4,6 +4,11 @@ export const Wrap = styled.div`
   display: flex;
   margin: 50px 0;
   gap: 50px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    margin: 20px 0;
+  }
 `;
 export const Content = styled.div`
   display: flex;
@@ -58,13 +63,52 @@ export const Content = styled.div`
     margin-bottom: 30px;
   }
 
-  .btn {
+  @media (max-width: 760px) {
+    .sup_title {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 34px;
+      line-height: 1.4;
+    }
+    p {
+      font-size: 15px;
+    }
+
+    .btn {
+      button {
+        height: 35px !important;
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    .sup_title {
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+    .title {
+      font-size: 27px;
+      line-height: 2rem;
+    }
+    p {
+      font-size: 14px;
+    }
   }
 `;
 export const Image = styled.div`
+  display: flex;
+  width: 100%;
   img {
     max-width: 100%;
     width: 100%;
     object-fit: cover;
+  }
+  @media (max-width: 760px) {
+    img {
+      min-width: 100%;
+      object-fit: unset;
+    }
   }
 `;
