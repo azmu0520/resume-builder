@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { data } from "../utilities/navbar";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import Template from "../components/Templates/Template";
 const Root = () => {
   // useEffect(() => {
   //   navigate(token ? "/" : "/login");
@@ -14,11 +15,10 @@ const Root = () => {
         {data?.map(({ id, path, Component }) => (
           <Route key={id} path={path} element={<Component />} />
         ))}
-        {/* <Route path="/" element={<Dashboard />} />
-        <Route path="all-courses/:courseId" element={<Course />} /> */}
+        <Route path="templates/:id" element={<Template />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
       </Route>
-      <Route path="login" element={<Login />} />
-      <Route path="register" element={<Register />} />
       <Route path={"*"} element={<div>you are lost</div>} />
     </Routes>
   );

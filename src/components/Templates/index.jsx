@@ -4,6 +4,7 @@ import demo1 from "../../assets/images/demo-1.png";
 import demo2 from "../../assets/images/demo-2.png";
 import demo3 from "../../assets/images/demo-3.png";
 import GenericHead from "../Generic/Header";
+import { NavLink } from "react-router-dom";
 
 export default function Templates() {
   return (
@@ -24,7 +25,7 @@ export default function Templates() {
                 height: "45px",
               }}
             >
-              See Template
+              <NavLink to="templates/11"> See Template</NavLink>
             </Button>
             <Button variant="contained" style={{ height: "45px" }}>
               Use Template
@@ -40,7 +41,7 @@ export default function Templates() {
                 height: "45px",
               }}
             >
-              See Template
+              <NavLink to="templates/12"> See Template</NavLink>
             </Button>
             <Button variant="contained" style={{ height: "45px" }}>
               Use Template
@@ -56,7 +57,7 @@ export default function Templates() {
                 height: "45px",
               }}
             >
-              See Template
+              <NavLink to="templates/13"> See Template</NavLink>
             </Button>
             <Button variant="contained" style={{ height: "45px" }}>
               Use Template

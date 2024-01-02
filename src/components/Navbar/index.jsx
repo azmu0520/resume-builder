@@ -8,13 +8,15 @@ import Footer from "../Footer";
 import { useState } from "react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <Wrap>
       <Container>
         <Modal
           open={open}
-          onClose={() => setOpen(false)}
+          onClose={handleClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
           slotProps={{
@@ -26,7 +28,7 @@ export default function Navbar() {
           <MuModal>
             <div className="menu_links">
               {data.map(({ path, title }, i) => (
-                <NavLink to={path} key={i}>
+                <NavLink to={path} key={i} onClick={handleClose}>
                   {title}
                 </NavLink>
               ))}
@@ -34,10 +36,15 @@ export default function Navbar() {
                 variant="contained"
                 style={{ maxHeight: "40px" }}
                 className="btn"
+                onClick={handleClose}
               >
                 <NavLink to="/login">LogIn</NavLink>
               </Button>
-              <Button variant="contained" style={{ maxHeight: "40px" }}>
+              <Button
+                variant="contained"
+                style={{ maxHeight: "40px" }}
+                onClick={handleClose}
+              >
                 <NavLink to="/register">SignUp</NavLink>
               </Button>
             </div>
