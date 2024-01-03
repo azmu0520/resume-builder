@@ -25,7 +25,7 @@ export default function Templates() {
                 height: "45px",
               }}
             >
-              <NavLink to="templates/11"> See Template</NavLink>
+              <NavLink to="/templates/11"> See Template</NavLink>
             </Button>
             <Button variant="contained" style={{ height: "45px" }}>
               Use Template
