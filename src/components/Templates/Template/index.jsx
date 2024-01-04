@@ -1,9 +1,75 @@
 import { Content, PDF, Temp1, Wrap } from "./style";
-import html2pdf from "html2pdf.js/dist/html2pdf.min";
+import {
+  Document,
+  Page,
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  PDFDownloadLink,
+} from "@react-pdf/renderer";
+
 import img from "../../../assets/images/about.jpg";
-import ReactDOMServer from "react-dom/server";
+// import { Document, Page, Text, View } from "@react-pdf/renderer";
 
 // Create styles
+const styles = StyleSheet.create({
+  page: {
+    padding: 50,
+  },
+  header: {
+    marginBottom: 20,
+  },
+  section: {
+    marginBottom: 10,
+  },
+  item: {
+    marginBottom: 5,
+  },
+  image: {
+    width: 200,
+    height: 200,
+  },
+});
+
+const MyDocument = () => (
+  <Document>
+    <Page size="A4" style={styles.page}>
+      <View style={styles.header}>
+        <Image src={img} style={styles.image} />
+        {/* <Text>{props.personalData.name}</Text>
+      <Text>{props.personalData.address}</Text>
+      <Text>{props.personalData.email}</Text> */}
+      </View>
+      <View style={styles.section}>
+        <Text>Education</Text>
+        {/* {props.education.map((edu, index) => (
+        <View key={index} style={styles.item}>
+          <Text>{edu.institution}</Text>
+          <Text>{edu.degree}</Text>
+          <Text>{edu.graduationYear}</Text>
+        </View>
+      ))} */}
+      </View>
+      <View style={styles.section}>
+        <Text>Experience</Text>
+        {/* {props.experience.map((exp, index) => (
+        <View key={index} style={styles.item}>
+          <Text>{exp.company}</Text>
+          <Text>{exp.title}</Text>
+          <Text>
+            {exp.startDate} - {exp.endDate}
+          </Text>
+        </View>
+      ))} */}
+      </View>
+      <View style={styles.section}>
+        <Text>Skills</Text>
+        {/* <Text>{props.skills.join(", ")}</Text> */}
+      </View>
+    </Page>
+  </Document>
+);
 
 export default function Template() {
   const pdfJSX = () => {
@@ -118,19 +184,22 @@ export default function Template() {
       </Temp1>
     );
   };
-  const printHandler = () => {
-    const printElement = ReactDOMServer.renderToString(pdfJSX());
-    // const printElement = pdfJSX();
+  // const styles = StyleSheet.create({
+  //   page: {
+  //     flexDirection: "row",
+  //   },
+  //   section: {
+  //     flexGrow: 1,
+  //   },
+  // });
 
-    html2pdf().from(printElement).save();
-  };
   return (
     <Wrap>
-      {/* <Content>Content</Content> */}
-      <PDF>
-        {pdfJSX()}
-        <button onClick={printHandler}>Print</button>
-      </PDF>
+      <PDFDownloadLink document={<MyDocument />} fileName="my-form.pdf">
+        {({ blob, url, loading, error }) =>
+          loading ? "Loading document..." : "Download now!"
+        }
+      </PDFDownloadLink>
     </Wrap>
   );
 }
