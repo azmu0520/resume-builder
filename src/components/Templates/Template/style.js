@@ -7,7 +7,7 @@ export const Wrap = styled.div`
 
 export const Content = styled.div`
   flex: 1;
-  background-color: red;
+  /* background-color: red; */
 `;
 export const PDF = styled.div`
   flex: 1;
