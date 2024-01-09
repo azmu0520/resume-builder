@@ -85,7 +85,7 @@ export default function Personal() {
           size="small"
         />
       </Item>
-      <input type="submit" value={"iuy"} />
+      <input type="submit" value={"about"} />
     </Wrap>
   );
 }
